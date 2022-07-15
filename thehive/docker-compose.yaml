@@ -20,11 +20,9 @@ services:
       #- "--cortex-port"
       #- "9001"
       #- "--cortex-keys"
-      #- "k3DZO07qOoIMfNNS5qLloPmMS2PnhMMR"
+      #- "+Ys3uBk34+nHRRKCGiTrDCDRUAOY+ukD"
     volumes:
-      - thehiveconf:/etc/thehive/application.conf
-      - thehivedata:/opt/thp/thehive/data
-      - thehiveindex:/opt/thp/thehive/index
+      - ./thehive/conf/application.conf:/etc/thehive/application.conf
     networks:
       - SOC_NET
 
@@ -134,9 +132,6 @@ volumes:
   cassandradata:
   elasticsearchdata:
   cortexdata:
-  thehiveconf:
-  thehivedata:
-  thehiveindex:
   mispsqldata:
 
 
